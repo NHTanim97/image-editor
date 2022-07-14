@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato:wght@400;700&family=Lobster&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="main-outer">
+                <!-- left part start here -->
+                <div class="main-left">
+                    <article>
+                        <h3>Image Filters</h3>
+                        <form action="" id="sliderForm">
+
+                            <!-- 
+                                type="range" এর জন্য slider range হয়েছে ।
+                             -->
+                            <p>
+                                <label for="grayscale">Grayscale</label>
+                                <input id="gs" name="gs" type="range" min="" max="100" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="blur">Blur</label>
+                                <input id="blur" name="blur" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="hue-rotate">Hue-rotate</label>
+                                <input id="hue" name="hue-rotate" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="sepia">Sepia</label>
+                                <input id="sepia" name="sepia" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+
+                            <button type="reset">Reset</button>
+                        </form>
+                    </article>
+                </div>
+                <!-- left part end here -->
+
+
+                <!-- right part start here -->
+                <div class="main-right">
+                    <form id="myform">
+                        <input type="text" placeholder="Image URL" id="onlineurl">
+                        <button type="submit">Change Image</button>
+                    </form>
+                    <div class="img-area">
+                        <img src="images/boat.jpg" id="targetimage" alt="sky images">
+                    </div>
+                </div>
+                <!-- right part end here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- js file -->
+    <script src="js/main.js"></script>
+</body>
+</html>
